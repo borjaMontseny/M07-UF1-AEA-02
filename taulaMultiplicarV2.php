@@ -4,26 +4,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Borja M07 PHP</title>
+    <title>Taula de Multiplicar Versió 2</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
 <style>
-    table {
-        border-collapse: collapse;
-    }
-
-    td,
-    th {
-        border: 1px solid black;
-        text-align: center;
-        padding: 8px;
-    }
-
-    tr:nth-child(even) {
-        background-color: #dddddd;
-    }
+input{
+    margin-top: 5px;
+    width: 45px;
+    border: 1px solid #dddddd;
+    text-align: center;
+}
 </style>
 
 <body>
@@ -33,21 +25,16 @@
 
         <div class="alert alert-primary" role="alert">
             <h1>Taula de multiplicar de
-                <?php echo $numAleatori ?>
+                <?php echo $numAleatori ?> Versió 2
             </h1>
         </div>
 
-        <table>
-
-            <?php
-            for ($i = 1; $i <= 10; $i++) {
-                echo '<tr>';
-                echo '<td>' . $numAleatori . ' x ' . $i . ' = ' . '</td>';
-                echo '<td>' . ($numAleatori * $i) . '</td>';
-                echo '</tr>';
-            }
-            ?>
-        </table>
+        <?php
+        for ($i = 1; $i <= 10; $i++) {
+            echo '<input type="text" value="' . $numAleatori . '" /> x <input type="text" value="' . $i . '" /> = <input type="text" value="' . ($numAleatori * $i) . '" />';
+            echo '<br>';
+        }
+        ?>
 
     </div>
 
